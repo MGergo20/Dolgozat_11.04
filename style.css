@@ -56,11 +56,11 @@ nav li {
 ul a:hover{
     color: aquamarine;
 }
-.tartalom{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-
+.tartalom {
+  display: grid; /* Rácsos elrendezés */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px; /* Térköz az elemek között */
+  margin-top: 20px;
 }
 .borderfokep{
     border: 1px solid white;
@@ -84,7 +84,7 @@ footer a{
     color: rgb(0, 38, 255) ; 
 }
 
-@media screen and (max-width:650px) {
+/* @media screen and (max-width:650px) {
     .tartalom{
         grid-template-columns: 1fr 1fr;
 
@@ -100,4 +100,4 @@ footer a{
     nav ul a{
         grid-template-columns: 1fr;
     }
-}
+} */
