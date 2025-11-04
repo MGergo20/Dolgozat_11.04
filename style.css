@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color: rgb(22, 125, 185);
+    color: cadetblue ;
+   
+}
+main{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+header{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+    margin: 0;
+    color: cadetblue ;
+}
+h2{
+    border: 1px solid rgb(22, 125, 185);
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(107, 212, 216) ;
+    background-color: rgb(22, 125, 185);
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+nav{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 40px;
+    background-color: rgb(95, 95, 151);
+}
+.dolt{
+    text-align: justify;
+    padding: 5px;
+    font-style: italic;
+    padding: 10px;
+}
+
+nav ul a{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: cadetblue ;
+}
+nav li {
+    list-style-type: none;
+}
+ul a:hover{
+    color: aquamarine;
+}
+.tartalom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+.borderfokep{
+    border: 1px solid white;
+    background-color: white;
+    padding: 10px;
+}
+img{
+    width: 100%;
+    padding: 5px;
+}
+p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 5px;
+}
+footer{
+    padding: 10px;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(0, 38, 255) ; 
+}
+
+@media screen and (max-width:650px) {
+    .tartalom{
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+@media screen and (max-width:500px) {
+    .tartalom{
+        grid-template-columns: 1fr ;
+    }
+    h1{
+        font-size: 50px;
+    }
+    nav ul a{
+        grid-template-columns: 1fr;
+    }
+}
