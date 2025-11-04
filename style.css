@@ -30,12 +30,11 @@ h2{
     padding: 5px;
     margin: 5px;
 }
-nav{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    height: 40px;
-    background-color: rgb(95, 95, 151);
+nav {
+  display: grid;                 /* A nav maga is rács */
+  place-items: center;           /* Középre igazítja a tartalmát */
+  background-color: rgb(95, 95, 151);
+  padding: 10px;
 }
 .dolt{
     text-align: justify;
@@ -43,18 +42,23 @@ nav{
     font-style: italic;
     padding: 10px;
 }
+nav ul {
+  display: grid;                 /* Rács az elemekhez */
+  grid-auto-flow: column;        /* Alapból egymás mellett */
+  gap: 30px;                     /* Térköz a menüpontok között */
+  list-style: none;              /* Eltünteti a pöttyöket */
+  padding: 0;
+  margin: 0;
+}
 
-nav ul a{
-    margin: 0;
-    list-style: none;
-    text-decoration: none;
-    color: cadetblue ;
+nav li a {
+  text-decoration: none;
+  color: cadetblue;
+  font-weight: bold;
+  font-size: 18px;
 }
-nav li {
-    list-style-type: none;
-}
-ul a:hover{
-    color: aquamarine;
+nav li a:hover {
+  color: aquamarine;
 }
 .tartalom {
   display: grid; /* Rácsos elrendezés */
@@ -66,6 +70,7 @@ ul a:hover{
     border: 1px solid white;
     background-color: white;
     padding: 10px;
+    border-radius: 10px;
 }
 img{
     width: 100%;
@@ -84,20 +89,19 @@ footer a{
     color: rgb(0, 38, 255) ; 
 }
 
-/* @media screen and (max-width:650px) {
+@media screen and (max-width:650px) {
     .tartalom{
         grid-template-columns: 1fr 1fr;
 
     }
 }
-@media screen and (max-width:500px) {
-    .tartalom{
-        grid-template-columns: 1fr ;
-    }
-    h1{
-        font-size: 50px;
-    }
-    nav ul a{
-        grid-template-columns: 1fr;
-    }
-} */
+@media screen and (max-width: 500px) {
+  nav ul {
+    grid-auto-flow: row;         /* Egymás alá kerüljenek */
+    justify-items: center;       /* Középre igazítja a linkeket */
+    gap: 10px;                   /* Kisebb térköz */
+  }
+  .tartalom{
+    grid-template-columns: 1fr;
+  }
+}
